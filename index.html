@@ -3,50 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Space</title>
+    <title>Lililatortue | Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            height: 100vh;
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; color: #171717; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .bento-card { 
+            background: white; 
+            border: 1px solid #e5e5e5; 
+            transition: all 0.2s ease;
         }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-        }
+        .bento-card:hover { border-color: #171717; transform: translateY(-2px); }
     </style>
 </head>
-<body class="flex items-center justify-center p-6">
-    <div class="glass max-w-md w-full p-8 text-white text-center shadow-2xl">
-        <div class="mb-6">
-            <div class="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
-                ✨
+<body class="max-w-3xl mx-auto px-6 py-20">
+
+    <header class="mb-16">
+        <h1 class="text-4xl font-semibold tracking-tight mb-2">Lililatortue</h1>
+        <p class="text-lg text-neutral-500 font-light">Full-stack Developer & AI Infrastructure Enthusiast</p>
+        <div class="mt-4 flex gap-4 text-sm mono text-neutral-400">
+            <span class="flex items-center">● Available for projects</span>
+            <a href="https://github.com/Lililatortue" class="hover:text-black underline decoration-neutral-300">GitHub</a>
+        </div>
+    </header>
+
+    <main class="space-y-12">
+        
+        <section>
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-4 font-semibold">About</h2>
+            <p class="leading-relaxed text-neutral-600">
+                Focusing on building robust backends with Spring Boot and Kotlin, alongside modern frontends in Angular and SwiftUI. Currently exploring self-hosted AI infrastructure and MCP servers.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-4 font-semibold">Selected Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bento-card p-6 rounded-xl">
+                    <h3 class="font-medium mb-1">NoteHub</h3>
+                    <p class="text-sm text-neutral-500 mb-4">Spring Boot / Kotlin backend implementing architectural patterns.</p>
+                    <span class="text-xs mono bg-neutral-100 px-2 py-1 rounded">Backend</span>
+                </div>
+                <div class="bento-card p-6 rounded-xl">
+                    <h3 class="font-medium mb-1">Mobile Systems</h3>
+                    <p class="text-sm text-neutral-500 mb-4">Native iOS development focusing on Core Data and SwiftUI.</p>
+                    <span class="text-xs mono bg-neutral-100 px-2 py-1 rounded">iOS</span>
+                </div>
             </div>
-            <h1 class="text-3xl font-bold tracking-tight">Your Name</h1>
-            <p class="text-white/80 mt-2 font-light">Building things in the digital ether.</p>
-        </div>
+        </section>
 
-        <div class="space-y-4">
-            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Projects</a>
-            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Writing</a>
-            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Twitter / X</a>
-        </div>
+        <section>
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-4 font-semibold">Stack</h2>
+            <div class="flex flex-wrap gap-2 mono text-[13px]">
+                <span class="border border-neutral-200 px-3 py-1 rounded-full">Spring Boot</span>
+                <span class="border border-neutral-200 px-3 py-1 rounded-full">Angular</span>
+                <span class="border border-neutral-200 px-3 py-1 rounded-full">SwiftUI</span>
+                <span class="border border-neutral-200 px-3 py-1 rounded-full">Kotlin</span>
+                <span class="border border-neutral-200 px-3 py-1 rounded-full">DigitalOcean</span>
+            </div>
+        </section>
 
-        <footer class="mt-8 text-xs text-white/50">
-            &copy; 2026 • Built with vibes
-        </footer>
-    </div>
+    </main>
+
+    <footer class="mt-32 pt-8 border-t border-neutral-100 text-xs text-neutral-400 mono">
+        &copy; 2026 / Built with precision
+    </footer>
+
 </body>
 </html>
