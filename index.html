@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-6">
+    <div class="glass max-w-md w-full p-8 text-white text-center shadow-2xl">
+        <div class="mb-6">
+            <div class="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
+                ✨
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight">Your Name</h1>
+            <p class="text-white/80 mt-2 font-light">Building things in the digital ether.</p>
+        </div>
+
+        <div class="space-y-4">
+            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Projects</a>
+            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Writing</a>
+            <a href="#" class="block w-full py-3 px-4 glass hover:bg-white/20 transition-all duration-300">Twitter / X</a>
+        </div>
+
+        <footer class="mt-8 text-xs text-white/50">
+            &copy; 2026 • Built with vibes
+        </footer>
+    </div>
+</body>
+</html>
